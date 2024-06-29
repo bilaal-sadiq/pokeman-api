@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokeman API</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -14,17 +15,19 @@
                     <div class="pokeman-card">
                         <div class="pokeman__container">
                             <h3>Pokeman Name</h3>
-                            <p><b>Pokeman Weight</b></p>
+                            <p><b>Pokeman Type</b></p>
                             <p><b>Pokeman Picture</b></p>
                             <p><b>Pokeman Stats</b></p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-    
+<input type="text" id="pokemanName" placeholder="Enter Pokeman Name">
+<button onclick="fetchData()"> Fetch Pokeman</button><br>
+
+<img src="" alt="Pokeman Sprite" id="pokemanSprite" style="display: none;">
 </body>
 <script src="index.js"></script>
 </html>
