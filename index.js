@@ -2,7 +2,7 @@ async function fetchData(){
 
     try {
 
-        const pokemanName = document.getElementById.value.toLowerCase();
+        const pokemanName = document.getElementById("pokemanName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemanName}`)
 
         if(!response.ok){
@@ -10,7 +10,11 @@ async function fetchData(){
         }
 
         const data = await response.json();
-        console.log(data);
+        const pokemanSprite = data.sprites.front_default;
+        const imgElement = document.getElementById("pokemanSprite");
+
+        imgElement.src = pokemanSprite;
+        imgElement.style.display = "block"
     }
 
     catch(error){
